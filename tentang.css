@@ -7,19 +7,19 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif; /* Corrected font-family name */
+    font-family: 'Open Sans', sans-serif;
     background: #FEF9E1;
 }
 
 .wrapper {
-    max-width: 1100px; /* Use max-width for responsiveness */
+    max-width: 1100px;
     margin: auto;
     position: relative;
-    padding: 0 20px; /* Add some padding for smaller screens */
+    padding: 0 20px;
 }
 
 .logo a {
-    font-size: 2.5rem; /* Use rem for responsive font size */
+    font-size: 2.5rem;
     font-weight: bold;
     float: left;
     font-family: courier;
@@ -40,7 +40,7 @@ nav {
     background: #E5D0AC;
     z-index: 1;
     border-bottom: 1px solid #123524;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 nav ul {
@@ -48,13 +48,13 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    display: flex; /* Use flexbox for the menu */
-    flex-wrap: wrap; /* Allow wrapping */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    flex: 1; /* Allow items to grow and shrink */
-    text-align: center; /* Center align text */
+    flex: 1;
+    text-align: center;
 }
 
 nav ul li a {
@@ -62,7 +62,7 @@ nav ul li a {
     font-weight: bold;
     padding: 0 16px;
     text-decoration: none;
-    display: block; /* Make the link a block element */
+    display: block;
 }
 
 nav ul li a:hover {
@@ -70,11 +70,12 @@ nav ul li a:hover {
 }
 
 .kolom {
-    margin: 50px 0; /* Use shorthand for margin */
+    margin: 50px 0;
+    flex: 1 1 300px; /* Ensures columns are flexible */
 }
 
 .kolom .deskripsi {
-    font-size: 1.25rem; /* Use rem for responsive font size */
+    font-size: 1.25rem;
     font-weight: bold;
     font-family: 'Comic Sans MS';
     color: #123524;
@@ -84,11 +85,11 @@ nav ul li a:hover {
 h2 {
     font-family: 'Comic Sans MS';
     font-weight: 800;
-    font-size: 2.5rem; /* Use rem for responsive font size */
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #123524;
     width: 100%;
-    line-height: 1.2; /* Use line-height as a unitless value */
+    line-height: 1.2;
 }
 
 #copyright {
@@ -106,6 +107,10 @@ h2 {
 
     nav ul li {
         flex: 1 1 100%; /* Stack menu items vertically */
+    }
+
+    nav {
+        line-height: 60px; /* Reduced line-height for better alignment on smaller screens */
     }
 
     h2 {
@@ -132,5 +137,19 @@ h2 {
 
     .kolom .deskripsi {
         font-size: 0.9rem; /* Even smaller description font size */
+        line-height: 1.4; /* Adjust line height for readability */
+    }
+
+    section {
+        display: block; /* Stack columns vertically */
+    }
+
+    .kolom {
+        margin: 10px 0; /* Reduced margin for compactness */
+        flex: 1 1 100%; /* Ensure columns take full width on very small screens */
+    }
+
+    nav {
+        line-height: 50px; /* Reduced line height for very small screens */
     }
 }
